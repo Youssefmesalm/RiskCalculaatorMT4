@@ -1,1 +1,0 @@
-# RiskCalculaatorMT4
