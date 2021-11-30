@@ -166,7 +166,7 @@ bool CRiskCalculator::Create(const long chart, const string name, const int subw
 // Create main
 bool CRiskCalculator::CreateMain(const long chart, const string name, const int subwin)
 {
-   if (!m_main.Create(chart, name + "main", subwin, 0, 0, CDialog::m_client_area.Width(), CDialog::m_client_area.Height()))
+   if (!m_main.Create(chart, name + "main", subwin, 0, 0, CDialog::ClientAreaWidth(), CDialog::ClientAreaHeight()))
       return false;
    m_main.LayoutStyle(LAYOUT_STYLE_VERTICAL);
    m_main.Padding(20);
@@ -176,7 +176,7 @@ bool CRiskCalculator::CreateMain(const long chart, const string name, const int 
 
 bool CRiskCalculator::CreateLockRow(const long chart, const string name, const int subwin)
 {
-   if (!m_lock_row.Create(chart, name + "lock_row", subwin, 0, 0, CDialog::m_client_area.Width(), CONTROL_HEIGHT))
+   if (!m_lock_row.Create(chart, name + "lock_row", subwin, 0, 0, CDialog::ClientAreaWidth(), CONTROL_HEIGHT))
       return false;
    if (!m_lock_label.Create(chart, name + "lock_label", subwin, 0, 0, CONTROL_WIDTH, CONTROL_HEIGHT))
       return (false);
@@ -190,7 +190,7 @@ bool CRiskCalculator::CreateLockRow(const long chart, const string name, const i
 }
 bool CRiskCalculator::CreateRiskRow(const long chart, const string name, const int subwin)
 {
-   if (!m_risk_row.Create(chart, name + "risk_row", subwin, 0, 0, CDialog::m_client_area.Width(), CONTROL_HEIGHT))
+   if (!m_risk_row.Create(chart, name + "risk_row", subwin, 0, 0,CDialog::ClientAreaWidth(), CONTROL_HEIGHT))
       return false;
 
    if (!m_risk_label.Create(chart, name + "risk_label", subwin, 0, 0, CONTROL_WIDTH, CONTROL_HEIGHT))
@@ -209,7 +209,7 @@ bool CRiskCalculator::CreateRiskRow(const long chart, const string name, const i
 }
 bool CRiskCalculator::CreateRatioRow(const long chart, const string name, const int subwin)
 {
-   if (!m_ratio_row.Create(chart, name + "ratio_row", subwin, 0, 0, CDialog::m_client_area.Width(), CONTROL_HEIGHT))
+   if (!m_ratio_row.Create(chart, name + "ratio_row", subwin, 0, 0, CDialog::ClientAreaWidth(), CONTROL_HEIGHT))
       return false;
    if (!m_ratio_label.Create(chart, name + "ratio_label", subwin, 0, 0, CONTROL_WIDTH, CONTROL_HEIGHT))
       return false;
@@ -227,7 +227,7 @@ bool CRiskCalculator::CreateRatioRow(const long chart, const string name, const 
 }
 bool CRiskCalculator::CreateCalculationRow(const long chart, const string name, const int subwin)
 {
-   if (!m_calculation_actions_row.Create(chart, name + "calculation_row", subwin, 0, 0, CDialog::m_client_area.Width(), CONTROL_HEIGHT * 2.5))
+   if (!m_calculation_actions_row.Create(chart, name + "calculation_row", subwin, 0, 0,CDialog::ClientAreaWidth(), CONTROL_HEIGHT * 2.5))
       return false;
    if (!m_calc_sell_button.Create(chart, name + "sell_button_calc", subwin, 0, 0, CONTROL_WIDTH / 2, CONTROL_HEIGHT * 2))
       return false;
